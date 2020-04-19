@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/fonts/ionicons.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/Login-Form-Dark.css')}}">
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/Homepagestyle.css')}}">
+    <style> 
+
+.topnav {
+  overflow: hidden;
+  background-color: rgba(187, 181, 181, 0.288);
+}
+
+.topnav a {
+  float: right;
+  color: #1f1e1e;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: black;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: gray;
+}
+
+.topnav a.active {
+  background-color: rgb(182, 187, 182);
+  color: black;
+}
+
+        h4 { font-family: 'URW Chancery L, cursive'; }
+
+  
+p.first {
+            font-size: 3.0em !important;
+            text-align: center;
+        }
+        </style>
+</head>
+
+<body>
+    
+    <div class="topnav">
+            
+       
+        <a href="#about">About</a>
+        <a href="#login">Log In</a>
+        <a class="active" href="#home">Home</a>
+    </div>
+      <hr>
+      
+      <p class="first">
+      <h1 align="center">SOLD!!!!</h1>
+    </p>
+      <I><h5 align="center">If it is here, it's <strong>SOLD!!!!</strong></h5></I>
+    <br>
+    <br>
+    <br>
+
+      <div id="home" >
+            <p style="text-align: center;">
+
+            Are You Ready To Sell?  Are You Ready To Buy ? <br>
+            Yes ??  Then,
+            <strong>  Welcome to SOLD!!!</strong> <br>
+            A place where you BID Farewell to high prices. <br>
+            So don't think and get ready to sell and bid. <br>
+            <strong> Bid! Win! Save! </strong>
+        </p>
+        </div>
+
+    <div id= "login" class="login-dark">
+        <form action='{{url_for("login_check")}}' method="post">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <div class="form-group"><input class="form-control" type="text" name="user" placeholder="Username" required></div>
+            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password" required></div>
+            <p>{{erm}}</p>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="{{url_for('signup')}}" class="forgot">New User?Sign Up</a></form>
+    </div>
+
+    <div id="about" class="jumbotron">
+        <p>Created by Aditya Raj, Adithya H and Ayush Agarwal <br>
+        RV College Of Engineering, Bengaluru <br>
+    year: 2019</p>
+
+    </div>
+
+    <script src="{{url_for('static',filename='assets/js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/bootstrap/js/bootstrap.min.js')}}"></script>
+</body>
+
+</html>
